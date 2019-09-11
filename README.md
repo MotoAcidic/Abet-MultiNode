@@ -64,41 +64,41 @@ git clone https://github.com/CryptoCashBack-Hub/Advanced-Install.git && cd Advan
 Install & configure your desired master node with options:
 
 ```bash
-./install.sh -p ccbc
+./install.sh -p abet
 ```
 
 ## Examples for typical script invocation
 
 These are only a couple of examples for typical setups. Check my [easy step-by-step guide for [vultr](/docs/masternode_vps.md) that will guide you through the hardest parts.
 
-**Install & configure 4 CCBC masternodes:**
+**Install & configure 4 ABET masternodes:**
 
 ```bash
-./install.sh -p ccbc -c 4
+./install.sh -p abet -c 4
 ```
 
-**Update daemon of previously installed CCBC masternodes:**
+**Update daemon of previously installed ABET masternodes:**
 
 ```bash
-./install.sh -p ccbc -u -n "6"
+./install.sh -p abet -u -n "6"
 ```
 
-**Install 6 CCBC masternodes with the git release tag "tags/v1.0.0.5"**
+**Install 6 ABET masternodes with the git release tag "tags/v1.0.0.5"**
 
 ```bash
-./install.sh -p ccbc -c 6 -r "tags/v1.0.0.5"
+./install.sh -p abet -c 6 -r "tags/v1.0.0.5"
 ```
 
-**Wipe all CCBC masternode data:**
+**Wipe all ABET masternode data:**
 
 ```bash
-./install.sh -p ccbc -w
+./install.sh -p abet -w
 ```
 
-**Install 2 CCBC masternodes and configure sentinel monitoring:**
+**Install 2 ABET masternodes and configure sentinel monitoring:**
 
 ```bash
-./install.sh -p ccbc -c 2 -s
+./install.sh -p abet -c 2 -s
 ```
 
 ## Options
@@ -107,7 +107,7 @@ The _install.sh_ script support the following parameters:
 
 | Long Option  | Short Option | Values              | description                                                         |
 | :----------- | :----------- | ------------------- | ------------------------------------------------------------------- |
-| --project    | -p           | project, e.g. "ccbc"| shortname for the project                                           |
+| --project    | -p           | project, e.g. "abet"| shortname for the project                                           |
 | --net        | -n           | "4" / "6"           | ip type for masternode. (ipv)6 is default                           |
 | --release    | -r           | e.g. "tags/v1.0.0.2"| a specific git tag/branch, defaults to latest tested                |
 | --count      | -c           | number              | amount of masternodes to be configured                              |
@@ -122,7 +122,7 @@ The _install.sh_ script support the following parameters:
 If you want to check the status of your masternode, the best way is currently running the cli e.g. for $MUE via
 
 ```
-/usr/local/bin/ccbc-cli -conf=/etc/masternodes/ccbc_n1.conf getinfo
+/usr/local/bin/altbet-cli -conf=/etc/masternodes/abet_n1.conf getinfo
 
 {
     "version" : 1000004,
@@ -137,7 +137,7 @@ If you want to check the status of your masternode, the best way is currently ru
     "difficulty" : 47075.67091216,
     "testnet" : false,
     "moneysupply" : 8015522.58694497,
-    "zCCBCsupply" : {
+    "zABETsupply" : {
         "1" : 1.00000000,
         "5" : 5.00000000,
         "10" : 10.00000000,
@@ -160,19 +160,19 @@ If you want to check the status of your masternode, the best way is currently ru
 
 ## Start Coin on initial install
 ```
-/usr/local/bin/activate_masternodes_ccbc
+/usr/local/bin/activate_masternodes_abet
 ```
 ## Stop coin
 ```
-/usr/local/bin/ccbc-cli -conf=/etc/masternodes/ccbc_n1.conf stop
+/usr/local/bin/altbet-cli -conf=/etc/masternodes/abet_n1.conf stop
 ```
 ## Start Coin
 ```
-/usr/local/bin/ccbcd -conf=/etc/masternodes/ccbc_n1.conf
+/usr/local/bin/altbetd -conf=/etc/masternodes/abet_n1.conf
 ```
 ## Getinfo
 ```
-/usr/local/bin/ccbc-cli -conf=/etc/masternodes/ccbc_n1.conf getinfo
+/usr/local/bin/altbet-cli -conf=/etc/masternodes/abet_n1.conf getinfo
 ```
 
 
@@ -196,12 +196,12 @@ The management script release will follow within the next couple of days.
 
 | command                               | description                                  |
 | :------------------------------------ | -------------------------------------------- |
-| nodemaster start ccbc (all\|number)   | start all or a specific pivx masternode(s)   |
-| nodemaster restart ccbc (all\|number) | stop all or a specific pivx masternode(s)    |
-| nodemaster stop ccbc (all\|number)    | restart all or a specific pivx masternode(s) |
-| nodemaster cleanup ccbc (all\|number) | delete chain data for all pivx masternodes   |
-| nodemaster status ccbc (all\|number)  | systemd process status for a pivx masternode |
-| nodemaster tail ccbc (all\|number)    | tail debug logs for a pivx masternode        |
+| nodemaster start abet (all\|number)   | start all or a specific pivx masternode(s)   |
+| nodemaster restart abet (all\|number) | stop all or a specific pivx masternode(s)    |
+| nodemaster stop abet (all\|number)    | restart all or a specific pivx masternode(s) |
+| nodemaster cleanup abet (all\|number) | delete chain data for all pivx masternodes   |
+| nodemaster status abet (all\|number)  | systemd process status for a pivx masternode |
+| nodemaster tail abet (all\|number)    | tail debug logs for a pivx masternode        |
 
 # Todo
 
