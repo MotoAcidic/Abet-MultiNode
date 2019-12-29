@@ -9,18 +9,15 @@ If this script helped you in any way, please contribute some feedback. BTC donat
 **Have fun, this is crypto after all!**
 
 ```
-BTC  1JfM1MU6Ro8e9VBiYzSTvYbzJUyLiupcNr
+BTC  19U8Jgyb38XnbGyQq3SHXS614pmLbvwKeZ
 ```
 
 
 Feel free to use my reflink to signup and receive a bonus w/ vultr:
-<a href="https://www.vultr.com/?ref=6903922"><img src="https://www.vultr.com/media/banner_2.png" width="468" height="60"></a>
+<a href="https://www.vultr.com/?ref=7424168"><img src="https://www.vultr.com/media/banner_2.png" width="468" height="60"></a>
 
-## Supported masternode projects
-
-The ever growing list of supported projects is now maintained at [https://github.com/CryptoCashBack-Hub/Advanced-Install/tree/master/config](https://github.com/CryptoCashBack-Hub/Advanced-Install/tree/master/config).
-
----
+If you wish to use DigitalOcean you can use this referal link but the following guide will only go over Vultr.
+Deploy your next app in seconds. Get $100 in cloud credits from DigitalOcean using my link: <a href="https://m.do.co/t/a3f23a15f9af">"<img src="https://blog.microdreamit.com/wp-content/uploads/2019/08/Digital-Ocean-Credit.gif" width="468" height="60"></a>
 
 **NOTE on the VPS choice for starters**
 
@@ -58,7 +55,7 @@ Comparing with building from source manually, you will benefit from using this s
 SSH to your VPS and clone the Github repository:
 
 ```bash
-git clone https://github.com/altbet/Abet-MultiNode.git && cd Abet-MultiNode
+git clone https://github.com/MotoAcidic/Abet-MultiNode.git && cd Abet-MultiNode
 ```
 
 Install & configure your desired master node with options:
@@ -83,10 +80,10 @@ These are only a couple of examples for typical setups. Check my [easy step-by-s
 ./install.sh -p abet -u -n "6"
 ```
 
-**Install 6 ABET masternodes with the git release tag "tags/v1.0.0.5"**
+**Install 6 ABET masternodes with the git release tag "tags/v3.4.0.0"**
 
 ```bash
-./install.sh -p abet -c 6 -r "tags/v1.0.0.5"
+./install.sh -p abet -c 6 -r "tags/v3.4.0.0"
 ```
 
 **Wipe all ABET masternode data:**
@@ -109,7 +106,7 @@ The _install.sh_ script support the following parameters:
 | :----------- | :----------- | ------------------- | ------------------------------------------------------------------- |
 | --project    | -p           | project, e.g. "abet"| shortname for the project                                           |
 | --net        | -n           | "4" / "6"           | ip type for masternode. (ipv)6 is default                           |
-| --release    | -r           | e.g. "tags/v1.0.0.2"| a specific git tag/branch, defaults to latest tested                |
+| --release    | -r           | e.g. "tags/v3.4.0.0"| a specific git tag/branch, defaults to latest tested                |
 | --count      | -c           | number              | amount of masternodes to be configured                              |
 | --update     | -u           | --                  | update specified masternode daemon, combine with -p flag            |
 | --sentinel   | -s           | --                  | install and configure sentinel for node monitoring                  |
@@ -122,38 +119,28 @@ The _install.sh_ script support the following parameters:
 If you want to check the status of your masternode, the best way is currently running the cli e.g. for $MUE via
 
 ```
-/usr/local/bin/altbet-cli -conf=/etc/masternodes/abet_n1.conf getinfo
+/usr/local/bin/abet-cli -conf=/etc/masternodes/abet_n1.conf getinfo
 
 {
-    "version" : 1000004,
-    "protocolversion" : 70004,
-    "walletversion" : 61000,
-    "balance" : 0.00000000,
-    "zerocoinbalance" : 0.00000000,
-    "blocks" : 15719,
-    "timeoffset" : 0,
-    "connections" : 21,
-    "proxy" : "",
-    "difficulty" : 47075.67091216,
-    "testnet" : false,
-    "moneysupply" : 8015522.58694497,
-    "zABETsupply" : {
-        "1" : 1.00000000,
-        "5" : 5.00000000,
-        "10" : 10.00000000,
-        "50" : 50.00000000,
-        "100" : 100.00000000,
-        "500" : 0.00000000,
-        "1000" : 0.00000000,
-        "5000" : 0.00000000,
-        "total" : 166.00000000
-    },
-    "keypoololdest" : 1537990754,
-    "keypoolsize" : 1001,
-    "paytxfee" : 0.00000000,
-    "relayfee" : 0.00010000,
-    "staking status" : "Staking Not Active",
-    "errors" : ""
+  "version": 3040000,
+  "protocolversion": 70917,
+  "services": "NETWORK/BLOOM/",
+  "walletversion": 61000,
+  "balance": 0.00000000,
+  "zerocoinbalance": 0.00000000,
+  "blocks": 9252,
+  "timeoffset": 0,
+  "connections": 129,
+  "proxy": "",
+  "difficulty": 22974.76067187333,
+  "testnet": false,
+  "moneysupply": 2007131.13233737,
+  "keypoololdest": 1576539264,
+  "keypoolsize": 1001,
+  "paytxfee": 0.00000000,
+  "relayfee": 0.00010000,
+  "staking status": "Staking Not Active",
+  "errors": ""
 }
 ```
 # Helpful Commands
@@ -164,15 +151,15 @@ If you want to check the status of your masternode, the best way is currently ru
 ```
 ## Stop coin
 ```
-/usr/local/bin/altbet-cli -conf=/etc/masternodes/abet_n1.conf stop
+/usr/local/bin/abet-cli -conf=/etc/masternodes/abet_n1.conf stop
 ```
 ## Start Coin
 ```
-/usr/local/bin/altbetd -conf=/etc/masternodes/abet_n1.conf
+/usr/local/bin/abetd -conf=/etc/masternodes/abet_n1.conf
 ```
 ## Getinfo
 ```
-/usr/local/bin/altbet-cli -conf=/etc/masternodes/abet_n1.conf getinfo
+/usr/local/bin/abet-cli -conf=/etc/masternodes/abet_n1.conf getinfo
 ```
 
 
@@ -187,7 +174,7 @@ If this script helped you in any way, please contribute some feedback. BTC donat
 **Have fun, this is crypto after all!**
 
 ```
-BTC  1JfM1MU6Ro8e9VBiYzSTvYbzJUyLiupcNr
+BTC  19U8Jgyb38XnbGyQq3SHXS614pmLbvwKeZ
 ```
 
 ## Management script (not yet implemented)
@@ -219,5 +206,5 @@ Ping me at contact@marsmenschen.com for questions and send some crypto my way if
 **Have fun, this is crypto after all!**
 
 ```
-BTC  1JfM1MU6Ro8e9VBiYzSTvYbzJUyLiupcNr
+BTC  19U8Jgyb38XnbGyQq3SHXS614pmLbvwKeZ
 ```
