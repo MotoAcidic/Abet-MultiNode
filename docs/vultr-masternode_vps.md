@@ -84,7 +84,7 @@ Login to your newly installed node as "root".
 Clone this git repository first:
 
 ```
-git clone https://github.com/MotoAcidic/Abet-MultiNode.git && cd vps
+git clone https://github.com/altbet/Abet-MultiNode.git && cd vps
 ```
 
 
