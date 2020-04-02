@@ -55,7 +55,7 @@ Comparing with building from source manually, you will benefit from using this s
 SSH to your VPS and clone the Github repository:
 
 ```bash
-git clone https://github.com/MotoAcidic/Abet-MultiNode.git && cd Abet-MultiNode
+git clone https://github.com/altbet/Abet-MultiNode.git && cd Abet-MultiNode
 ```
 
 Install & configure your desired master node with options:
@@ -122,24 +122,25 @@ If you want to check the status of your masternode, the best way is currently ru
 /usr/local/bin/abet-cli -conf=/etc/masternodes/abet_n1.conf getinfo
 
 {
-  "version": 3040000,
-  "protocolversion": 70917,
+"version": 3040100,
+  "protocolversion": 71000,
   "services": "NETWORK/BLOOM/",
   "walletversion": 61000,
-  "balance": 0.00000000,
+  "balance": 0.0,
   "zerocoinbalance": 0.00000000,
-  "blocks": 9252,
-  "timeoffset": 0,
-  "connections": 129,
+  "blocks": 74831,
+  "timeoffset": -313,
+  "connections": 16,
   "proxy": "",
-  "difficulty": 22974.76067187333,
+  "difficulty": 3057.202499631633,
   "testnet": false,
-  "moneysupply": 2007131.13233737,
-  "keypoololdest": 1576539264,
+  "moneysupply": 2177318.59247520,
+  "keypoololdest": 1576542282,
   "keypoolsize": 1001,
+  "unlocked_until": 0,
   "paytxfee": 0.00000000,
   "relayfee": 0.00010000,
-  "staking status": "Staking Not Active",
+  "staking status": "Staking Active",
   "errors": ""
 }
 ```
